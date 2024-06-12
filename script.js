@@ -7,18 +7,22 @@ const countdown = () => {
   // Calculate remaining days (consider target date crossing midnight)
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-  // Optimized calculation of remaining hours, minutes, and seconds
+  // Calculate remaining time in milliseconds
   const remainingTime = diff % (1000 * 60 * 60);
-  let hours = Math.floor(remainingTime / (1000 * 60 * 60));
-  if (hours == 0) {
-    hours = 23;
-  }
+
+  // Calculate remaining hours considering minutes and seconds
+  // const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+  const hours = Math.floor(diff / (1000 * 60 * 60)) - (days * 24);
+
+  // Optimized calculation of remaining minutes and seconds
   const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
   // Update the display with proper pluralization for days
   document.getElementById("compteur").innerHTML = `
-    J-${days} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    J-${days} <span class="separator">jour${days >= 2 ? 's' : ''}</span>
+    ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}
+  `;
 
   if (diff <= 0) {
     clearInterval(interval);
