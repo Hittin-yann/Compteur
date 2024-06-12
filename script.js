@@ -9,7 +9,10 @@ const countdown = () => {
 
   // Optimized calculation of remaining hours, minutes, and seconds
   const remainingTime = diff % (1000 * 60 * 60);
-  const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+  let hours = Math.floor(remainingTime / (1000 * 60 * 60));
+  if (hours == 0) {
+    hours = 23;
+  }
   const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
