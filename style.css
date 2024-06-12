@@ -1,0 +1,12 @@
+#compteur {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    position: fixed; /* Position the element relative to the browser window */
+    top: 50%; /* Set the top position to 50% */
+    left: 50%; /* Set the left position to 50% */
+    transform: translate(-50%, -50%); /* Adjust the position to compensate for the element's size */
+}
+h1 {
+    font-size: 4em;
+}
