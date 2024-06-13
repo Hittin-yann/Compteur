@@ -37,7 +37,7 @@ const countdown = () => {
 function clue (days, hours) {
   if (days == 0 & hours < 23) {
     document.getElementById("compteur").innerHTML =+ 
-    "<br /> Mystère n°1 : 🎮"+
+    "<br /> Mystère n°1 : 🎮 🟢"+
     "<br /> Mystère n°2 : ❤️ 📖 🌐"
   }
 }
