@@ -1,3 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
 #compteur {
     font-size: 3em;
     font-weight: bold;
@@ -9,4 +17,43 @@
 }
 h1 {
     font-size: 4em;
+    text-align: center;
+}
+
+#evenement {
+    width: 30%;
+    display: none;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#modal {
+    text-align: center;
+}
+
+/* ########################################
+                    MODAL
+   ######################################## */
+
+.modal {
+    display: none; /* La modal est cachée par défaut */
+    position: fixed; /* Positionnement fixe */
+    z-index: 1; /* Superposition sur tous les autres éléments */
+    left: 0;
+    top: 0;
+    width: 100%; /* Prend toute la largeur de l'écran */
+    height: 100%; /* Prend toute la hauteur de l'écran */
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent noir */
+}
+
+.modal-contenu {
+    background-color: #fefefe;
+    margin: 15% auto; /* Marge automatique pour centrer la modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%; /* Largeur de la modal */
+    border-radius: 10px;
 }

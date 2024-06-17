@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystère</title>
+    <title>Counter</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- AXIOS -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Cookies JS -->
+    <script src="
+    https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
+    "></script>
 </head>
 <body>
-    <h1 style="text-align: center;">Compteur</h1>
+    <h1>Compteur</h1>
     <div id="compteur"></div>
+    <form method="get" id="evenement">
+        <h2>Un Autre Événement ?</h2>
+        <div class="field">
+            <label>Titre de la page : </label>
+            <input type="text" id="titrePage" name="titrePage" required>
+        </div>
+        <br>
+        <div class="field">
+            <label>Date de l'événement : </label>
+            <input type="datetime-local" id="dateTime" name="dateTime" required>
+        </div>
+        <br>
+        <input type="submit" id="button" value="Créer Événement">
+    </form>
+    <div id="modal" class="modal">
+        <div class="modal-contenu">
+            <h2>Êtes-vous sûr de vous ?</h2>
+            <button id="ouiModal">Oui</button>
+            <button id="nonModal">Non</button>
+        </div>
+    </div>
 
     <script src="./javascript/script.js"></script>
 </body>
