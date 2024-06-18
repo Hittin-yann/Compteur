@@ -57,3 +57,25 @@ h1 {
     width: 25%; /* Largeur de la modal */
     border-radius: 10px;
 }
+
+@media (max-width: 767px) {
+    #evenement {
+        width: 50%;
+    }
+    /* #compteur {
+        top: 62%; // Set the top position to 50%
+    } */
+    .modal-contenu {
+        width: 50%;
+    }
+}
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+    #compteur {
+        top: 62%; // Set the top position to 50% 
+    }
+}
+
+@media (min-width: 1200px) {
+    
+} */

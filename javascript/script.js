@@ -91,6 +91,7 @@ compteur.modules.evenement = (function() {
       start: () => {
         console.log("Gestion des evenements !");
         document.querySelector("#evenement").style.display = "block";
+        document.querySelector("#compteur").style.top = "62%";
         document.forms["evenement"].addEventListener("submit", compteur.modules.evenement.getValueForms);
       },
       createdBr: (formConteneur) => {
@@ -101,11 +102,11 @@ compteur.modules.evenement = (function() {
         event.preventDefault();
         document.querySelector("#modal").style.display = "block";
 
+        let title = document.forms["evenement"].titrePage.value;
+        let dateTime = document.forms["evenement"].dateTime.value;
+
         document.querySelector("#ouiModal").addEventListener("click", (e) => {
           e.preventDefault();
-
-          let title = document.forms["evenement"].titrePage.value;
-          let dateTime = document.forms["evenement"].dateTime.value;
 
           compteur.modules.affichage.setTitle(title);
           compteur.modules.affichage.setTargetDate(new Date(dateTime));
@@ -119,7 +120,9 @@ compteur.modules.evenement = (function() {
 
           document.querySelector("#modal").style.display = "none";
           document.querySelector("#evenement").style.display = "none";
+          document.querySelector("#compteur").style.top = "50%";
         });
+
         document.querySelector("#nonModal").addEventListener("click", (e) => {
           e.preventDefault();
           document.querySelector("#modal").style.display = "none";
